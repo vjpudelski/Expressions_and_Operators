@@ -13,10 +13,10 @@ namespace Expressions_and_Operators
             Program prog = new Program();
 
             // Comment out any of the methods that you do not want to execute
-            //prog.Literals();
-            //prog.OrderOfOperations();
-            //prog.Bitwise();
-            //prog.Assignment();
+            prog.Literals();
+            prog.OrderOfOperations();
+            prog.Bitwise();
+            prog.Assignment();
             prog.Conditional();
 
             Console.ReadLine();
@@ -24,6 +24,8 @@ namespace Expressions_and_Operators
 
         public void Literals()
         {
+            Console.WriteLine("***** Literals");
+
             // will print different types of literals in the C# language
             Console.WriteLine("{0}", 123); // integer value
             Console.WriteLine("{0}", true); // boolean value
@@ -31,10 +33,14 @@ namespace Expressions_and_Operators
             Console.WriteLine("{0}", 3.14F); // float value
             Console.WriteLine("{0}", 'a'); // character value
             Console.WriteLine("{0}", "HI!"); // string value
+
+            Console.WriteLine();
         }
 
         public void OrderOfOperations()
         {
+            Console.WriteLine("***** Order of Operations");
+
             // this shows the order of operations
             // in the case of 2 + 3 * 5, 3 * 5 is performed first
             // that result is then added to 2
@@ -47,10 +53,14 @@ namespace Expressions_and_Operators
             Console.WriteLine(i++);
             Console.WriteLine(--i);
             Console.WriteLine(i);
+
+            Console.WriteLine();
         }
 
         public void Bitwise()
         {
+            Console.WriteLine("***** Bitwise");
+
             // demonstrate a bitwise AND operator
             // additional code used to display the bit string of a number
             int x = 3, y = 123;
@@ -59,10 +69,14 @@ namespace Expressions_and_Operators
             Console.WriteLine(Convert.ToString(x, 2).PadLeft(8, '0'));
             Console.WriteLine(Convert.ToString(y, 2).PadLeft(8, '0'));
             Console.WriteLine(Convert.ToString(x & y, 2).PadLeft(8, '0'));
+
+            Console.WriteLine();
         }
 
         public void Assignment()
         {
+            Console.WriteLine("***** Assignment");
+
             // examples of using the assignment operator with another operation.
             int x = 3;
             x *= 2;
@@ -73,15 +87,21 @@ namespace Expressions_and_Operators
 
             x %= 3;
             Console.WriteLine("{0}", x);
+
+            Console.WriteLine();
         }
 
         public void Conditional()
         {
+            Console.WriteLine("***** Conditional");
+
             // instead of an if statement, a new way to do a conditional assignment
             int x = 3, y = 2;
             string Message = ((x < y) && (x > 0)) ? "X is smaller" : "X is bigger";
 
             Console.WriteLine(Message);
+
+            Console.WriteLine();
         }
     }
 }
